@@ -17,12 +17,8 @@ import { NumdocumentDB } from './models/n_documento';
 import { OperatorDB } from './models/operador';
 
 export const AppDataSource = new DataSource({
-	type: 'mysql',
-	host: process.env.DB_HOST,
-	port: parseInt(process.env.PORT_DB!, 10),
-	username: process.env.DB_USER,
-	password: process.env.DB_PASS,
-	database: process.env.DB_NAME,
+	type: 'postgres',
+	url: process.env.DB_URL,
 	synchronize: true,
 	logging: false,
 	entities: [
