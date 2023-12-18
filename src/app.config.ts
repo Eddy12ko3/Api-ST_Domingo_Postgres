@@ -19,6 +19,9 @@ import { OperatorDB } from './models/operador';
 export const AppDataSource = new DataSource({
 	type: 'postgres',
 	url: process.env.DB_URL,
+	ssl: {
+        rejectUnauthorized: false, // Esto aceptará el certificado autofirmado
+    },
 	synchronize: true,
 	logging: false,
 	entities: [
