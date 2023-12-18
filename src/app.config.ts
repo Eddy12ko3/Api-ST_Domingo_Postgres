@@ -22,7 +22,7 @@ export const AppDataSource = new DataSource({
 	ssl: {
         rejectUnauthorized: false, // Esto aceptará el certificado autofirmado
     },
-	synchronize: true,
+	synchronize: false,
 	logging: false,
 	entities: [
 		UserDB,
